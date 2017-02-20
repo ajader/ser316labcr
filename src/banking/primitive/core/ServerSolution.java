@@ -45,6 +45,25 @@ class ServerSolution implements AccountServer {
 		}
 	}
 	
+	public Account getAccount(String name) {
+		return accountMap.get(name);
+	}
+
+	public List<Account> getAllAccounts() {
+		return new ArrayList<Account>(accountMap.values());
+	}
+
+	public List<Account> getActiveAccounts() {
+		List<Account> result = new ArrayList<Account>();
+
+		for (Account acc : accountMap.values()) {
+			if (acc.getState() != State.CLOSED) {
+				result.add(acc);
+			}
+		}
+		return result;
+	}
+	
 	private boolean newAccountFactory(String type, String name, float balance)
 		throws IllegalArgumentException {
 		
@@ -83,25 +102,6 @@ class ServerSolution implements AccountServer {
 		}
 		acc.setState(State.CLOSED);
 		return true;
-	}
-
-	public Account getAccount(String name) {
-		return accountMap.get(name);
-	}
-
-	public List<Account> getAllAccounts() {
-		return new ArrayList<Account>(accountMap.values());
-	}
-
-	public List<Account> getActiveAccounts() {
-		List<Account> result = new ArrayList<Account>();
-
-		for (Account acc : accountMap.values()) {
-			if (acc.getState() != State.CLOSED) {
-				result.add(acc);
-			}
-		}
-		return result;
 	}
 	
 	public void saveAccounts() throws IOException {
