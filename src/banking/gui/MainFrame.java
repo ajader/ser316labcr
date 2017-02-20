@@ -46,7 +46,12 @@ class MainFrame extends JFrame {
 		constructForm();
 	}
 
-	
+	/**
+	 * Constructs and forms the panels
+	 * for the entire program
+	 * @param none
+	 * 
+	 */
 	private void constructForm() {
 		//*** Make these read from properties
 		typeLabel		= new JLabel(props.getProperty("TypeLabel"));
@@ -106,7 +111,7 @@ class MainFrame extends JFrame {
 		
 		setSize(400, 250);
 	}
-
+	
 	class DisplayHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			List<Account> accounts = null;

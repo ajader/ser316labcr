@@ -1,3 +1,8 @@
+/**
+ * Saving class extends from Account class
+ * This class deals with functions of depositing 
+ * and withdrawing from the savings account
+ */
 package banking.primitive.core;
 
 public class Savings extends Account {
