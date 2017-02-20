@@ -1,3 +1,12 @@
+/**
+ * Account Class is an abstract class that implements 
+ * Serializable.
+ * Has three states an account can be in
+ * OPEN, CLOSED, and OVERDRAWN
+ * Has abstract methods that can get the current balance,
+ * add to the account or deposit from the account
+ * 
+ */
 package banking.primitive.core;
 
 public abstract class Account implements java.io.Serializable {
