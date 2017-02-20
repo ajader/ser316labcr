@@ -1,3 +1,8 @@
+/**
+ * Checking account extends or inherits from Account.java
+ * This class handles two main functions
+ * It handles Depositing and withdrawing 
+ */
 package banking.primitive.core;
 
 public class Checking extends Account {
