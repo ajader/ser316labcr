@@ -133,7 +133,11 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 
-			if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
+			if (Float.parseFloat(balance) < 0)
+			{
+				JOptionPane.showMessageDialog(null, "Account can't start with a negative balance!");
+			}
+			else if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Account created successfully");
 			} else {
 				JOptionPane.showMessageDialog(null, "Account not created!");
