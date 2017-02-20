@@ -63,12 +63,12 @@ class MainFrame extends JFrame {
 		JButton withdrawButton = new JButton("Withdraw");
 		JButton saveButton = new JButton("Save Accounts");
 		displayAccountsButton = new JButton("List Accounts");
-		//JButton displayAllAccountsButton = new JButton("All Accounts");
+		JButton displayAllAccountsButton = new JButton("All Accounts");
 
 		this.addWindowListener(new FrameHandler());
 		newAccountButton.addActionListener(new NewAccountHandler());
 		displayAccountsButton.addActionListener(new DisplayHandler());
-		//displayAllAccountsButton.addActionListener(new DisplayHandler());
+		displayAllAccountsButton.addActionListener(new DisplayHandler());
 		depositButton.addActionListener(new DepositHandler());
 		withdrawButton.addActionListener(new WithdrawHandler());
 		saveButton.addActionListener(new SaveAccountsHandler());		
@@ -82,7 +82,7 @@ class MainFrame extends JFrame {
 		
 		JPanel panel2 = new JPanel();
 		panel2.add(displayAccountsButton);
-		//panel2.add(displayAllAccountsButton);
+		panel2.add(displayAllAccountsButton);
 		panel2.add(saveButton);
 		
 		JPanel panel3 = new JPanel();
