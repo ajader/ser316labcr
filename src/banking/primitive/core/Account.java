@@ -16,8 +16,8 @@ public abstract class Account implements java.io.Serializable {
         OPEN, CLOSED, OVERDRAWN
     };
 
-    private float balance = 0.0F;
-    private String name;
+    protected float balance = 0.0F;
+    protected String name;
     private State state;
 
     protected Account(String n) {
@@ -57,24 +57,7 @@ public abstract class Account implements java.io.Serializable {
         state = s;
     }
     
-    /**
-     * Adds money to an account. May not be done if the account is CLOSED
-     * 
-     * @param parameter
-     *            amount is a deposit and must be > 0
-     * @return true if the deposit was successful, false if not due to amount or
-     *         invalid state
-     */
 
-    public abstract String getType();
-
-    protected final State getState() {
-        return state;
-    }
-
-    protected final void setState(State s) {
-        state = s;
-    }
     public abstract boolean deposit(float amount);
 
     /**
