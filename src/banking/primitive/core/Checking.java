@@ -29,9 +29,6 @@ public class Checking extends Account {
 	
 	public String getType() { return "Checking"; }
 	
-	public String toString() {
-		return "Checking: " + getName() + ": " + getBalance();
-	}
 	public boolean deposit(float amount) {
 		if (getState() != State.CLOSED && amount > 0.0f) {
 			balance = balance + amount;
@@ -64,4 +61,8 @@ public class Checking extends Account {
 		return false;
 	}
 
+
+	public String toString() {
+		return "Checking: " + getName() + ": " + getBalance();
+	}
 }
