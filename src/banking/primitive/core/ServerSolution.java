@@ -1,3 +1,9 @@
+/**
+ * ServerSolution class 
+ * Creates a hashmap that stores names as the key
+ * and account as the value 
+ * 
+ */
 package banking.primitive.core;
 
 import java.util.ArrayList;

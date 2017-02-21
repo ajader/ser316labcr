@@ -1,3 +1,8 @@
+/**
+ * Checking account extends or inherits from Account.java
+ * This class handles two main functions
+ * It handles Depositing and withdrawing 
+ */
 package banking.primitive.core;
 
 public class Checking extends Account {
@@ -21,6 +26,9 @@ public class Checking extends Account {
 	 * A deposit may be made unless the Checking account is closed
 	 * @param float is the deposit amount
 	 */
+	
+	public String getType() { return "Checking"; }
+	
 	public boolean deposit(float amount) {
 		if (getState() != State.CLOSED && amount > 0.0f) {
 			balance = balance + amount;
@@ -53,10 +61,7 @@ public class Checking extends Account {
 		return false;
 	}
 
-	public String getType()  {
-		return "Checking";
-	}
-	
+
 	public String toString() {
 		return "Checking: " + getName() + ": " + getBalance();
 	}

@@ -1,3 +1,7 @@
+/**
+ * Main class that runs the program
+ * Also sets up the JFRAME
+ */
 package banking.gui;
 
 import javax.swing.JFrame;
